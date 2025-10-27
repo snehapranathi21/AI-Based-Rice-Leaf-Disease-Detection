@@ -1,0 +1,227 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Agriculture science a Bootstarp Website Template | Home :: w3layouts
+    </title>
+    <link
+      href="/static/css/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="/static/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/flexslider.css"
+      type="text/css"
+      media="screen"
+    />
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/modernizr.custom.js"></script>
+  </head>
+  <style>
+	body {
+		font-family: Arial, sans-serif;
+	}
+	.container {
+		width: 80%;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	h5 {
+		font-weight: 100px;
+		color: rgb(16, 166, 44);
+	}
+	ul {
+		list-style-type: none;
+	}
+	li {
+		margin-bottom: 10px;
+	}
+</style>
+  <body>
+    <!-- header -->
+    <div class="banner1">
+      <div class="container">
+        <div class="header">
+          <div class="head-nav">
+            <span class="menu"> </span>
+            <ul class="cl-effect-1">
+                <li><a href="/userdash">Dash Board</a></li>
+                <li class="active"><a href="/upload">Classification</a></li>
+				<li><a href="/signin">Sign Out</a></li>  
+                <div class="clearfix"></div>
+              </ul>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+        <!-- script-for-nav -->
+        <script>
+          $("span.menu").click(function () {
+            $(".head-nav ul").slideToggle(300, function () {
+              // Animation complete.
+            });
+          });
+        </script>
+        <!-- script-for-nav -->
+        <div class="logo1" style="font-size: xx-large;">
+          <a href="#" ></a>
+           AI Based Rice Leaf Disease Detection</a>
+          >
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+    <div class="main_bg">
+      <div class="container">
+        <div class="main">
+          <div class="section group">
+            <div class="col span_1_of_2">
+            
+              <div class="contact_info">
+              
+                  {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                  <ul class=flashes>
+                      {% for message in messages %}
+                      <li>{{ message }}</li>
+                      {% endfor %}
+                  </ul>
+                  {% endif %}
+                  {% endwith %}
+               
+              
+              </div>
+              <div class="clear"></div>
+            </div>
+            
+            <div class="col span_2_of_4">
+              <div class="contact-form">
+            
+                <h3 class="style">RICE LEAF DISEASE CLASSIFICATION</h3>
+              
+              
+                
+                  <div  class="row " style="border: 1px solid;flex-direction: column;align-items: center;">
+					<div class="col-6 col-md-6 " >
+					<img src=" {{url_for('send_image', filename=image_name)}}" style="width:427px;height:300px;border-radius: 50%;border: 1px solid greenyellow;">
+						
+					</div>
+					<div class="col-6 col-md-6 ">
+						<b>Result: </b>{{text}}<br>
+						<b>Causes of Disease:</b> {{msg}}
+						{% block body %}
+					{% if text == "Bacterial_leaf_blight" %}
+					<!-- <div class="container"> -->
+						<h5>Remedies for Bacterial Leaf Blight in Rice</h5>
+						<ul>
+							<li><strong>Use disease-resistant rice varieties:</strong> Select varieties that have shown resistance to Bacterial Leaf Blight.</li>
+							<li><strong>Ensure balanced fertilization:</strong> Avoid excessive use of nitrogen, as it can increase the severity of the disease.</li>
+							<li><strong>Maintain good field sanitation:</strong> Regularly remove weeds and other potential host plants from the field.</li>
+							<li><strong>Apply copper-based bactericides:</strong> Use these as a preventive measure to control the spread of the disease.</li>
+							<li><strong>Practice seed treatment:</strong> Treat seeds before planting to minimize the risk of infection. Avoid using seeds from infected plants.</li>
+						</ul>
+					<!-- </div> -->
+					{% elif text == "Brown_spot" %}
+					<!-- <div class="container"> -->
+						<h5>Remedies for Brown Spot in Rice</h5>
+						<ul>
+							<li><strong>Use resistant rice varieties:</strong> Opt for varieties that show resistance to Brown Spot.</li>
+							<li><strong>Apply balanced fertilizers:</strong> Ensure fertilizers address nutrient deficiencies, particularly silicon and nitrogen.</li>
+							<li><strong>Practice crop rotation and field sanitation:</strong> Rotate crops and maintain cleanliness in the field to reduce disease prevalence.</li>
+							<li><strong>Fungicides:</strong> Fungicides can be used for control, though their effectiveness may vary.</li>
+						</ul>
+					<!-- </div> -->
+					{% elif text == "Leaf_blast" %}
+						<!-- <div class="container"> -->
+							<h5>Remedies for Leaf Blast in Rice</h5>
+							<ul>
+								<li><strong>Plant resistant varieties of rice:</strong> Choose rice varieties known for their resistance to Leaf Blast.</li>
+								<li><strong>Avoid excessive nitrogen fertilization:</strong> Excessive nitrogen can increase the plant's susceptibility to the disease.</li>
+								<li><strong>Water management:</strong> Avoid conditions of water stress and prevent deep water flooding to reduce disease risk.</li>
+								<li><strong>Apply fungicides:</strong> Use fungicides, particularly during the early stages of the disease, for effective control.</li>
+								<li><strong>Implement crop rotation:</strong> Crop rotation helps reduce the pathogen load in the soil, thus lowering disease incidence.</li>
+							</ul>
+						<!-- </div> -->
+						{% elif text == "Leaf_scald" %}
+						<!-- <div class="container"> -->
+							<h5>Remedies for Leaf Scald in Rice</h5>
+							<ul>
+								<li><strong>Use resistant rice varieties:</strong> Opt for rice varieties that are resistant to Leaf Scald.</li>
+								<li><strong>Implement good water management practices:</strong> Proper water management can help prevent the spread of Leaf Scald.</li>
+								<li><strong>Avoid excessive nitrogen application:</strong> Excess nitrogen can increase the vulnerability of rice plants to Leaf Scald.</li>
+								<li><strong>Apply copper-based bactericides:</strong> These can be effective for the prevention and control of Leaf Scald.</li>
+							</ul>
+						<!-- </div> -->
+						{% elif text == "Narrow_brown_spot" %}
+						<!-- <div class="container"> -->
+							<h5>Remedies for Narrow Brown Spot in Rice</h5>
+							<ul>
+								<li><strong>Use disease-tolerant rice varieties:</strong> Opt for rice varieties that have a tolerance to Narrow Brown Spot.</li>
+								<li><strong>Apply balanced fertilization:</strong> Avoid the excessive use of nitrogen, as it can exacerbate the condition.</li>
+								<li><strong>Implement proper water management:</strong> Manage water levels effectively to reduce humidity around the plants, lowering disease risk.</li>
+								<li><strong>Fungicide application:</strong> Consider using fungicides, especially in cases of severe infestations.</li>
+							</ul>
+						<!-- </div> -->
+						{% else %}
+							<p></p>
+							{% endif %}
+							{% endblock %}
+					</div>
+
+                  </div>
+				  <form method="post" action="/upload" enctype="multipart/form-data" style="display: flex; justify-content: center;">
+					<div >
+					  <span><label>Rice Image</label></span>
+					  <span
+						><input name="file" type="file" class="textbox"
+					  /></span>
+					</div>
+                  <div>
+                    <span><input type="submit" value="Uplaod" /></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <p>
+          © 2025 All rights reserved | Design by
+          <a href="#">QIS CSE Students</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
