@@ -2,7 +2,6 @@
 
 This project is a **deep learning-based web application** designed to detect **rice leaf diseases** using **Convolutional Neural Networks (CNN)** and **MobileNetV2** with **transfer learning**. The app allows users to **register, log in, and upload images** of rice leaves to receive real-time disease predictions.
 
----
 
 ## 🚀 Features
 
@@ -13,7 +12,7 @@ This project is a **deep learning-based web application** designed to detect **r
 * 📊 **Database Integration** – User data stored securely using **SQL**
 * 🤖 **AI Model** – Trained using **CNN (MobileNetV2)** with **transfer learning** in Google Colab
 
----
+
 
 ## 🧐 Model Information
 
@@ -24,7 +23,7 @@ This project is a **deep learning-based web application** designed to detect **r
 * **Input:** Rice leaf image
 * **Output:** Predicted disease category
 
----
+
 
 ## 🔧 Tech Stack
 
@@ -37,7 +36,7 @@ This project is a **deep learning-based web application** designed to detect **r
 | **Environment** | Conda                 |
 | **Development** | Google Colab, VS Code |
 
----
+
 
 ## ⚙️ How to Run Locally
 
@@ -46,7 +45,7 @@ Follow the steps below to set up and run the project on your local system:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/rice-leaf-disease-detection.git
+git clone https://github.com/snehapranathi21/AI-Based-Rice-Leaf-Disease-Detection.git
 cd rice-leaf-disease-detection
 ```
 
@@ -74,7 +73,7 @@ python app.py
 Visit:
 🔗 [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
----
+
 
 ## 🧬 Folder Structure
 
@@ -90,7 +89,7 @@ rice-leaf-disease-detection/
 └── README.md                # Project Documentation
 ```
 
----
+
 
 ## 🧑‍� Future Enhancements
 
@@ -99,7 +98,7 @@ rice-leaf-disease-detection/
 * Add **disease treatment recommendations**
 * Enable **multi-language support** for farmers
 
----
+
 
 ## 📜 License
 
